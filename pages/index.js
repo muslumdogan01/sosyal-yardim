@@ -2,15 +2,14 @@ import Head from "next/head";
 import { Icon } from "../icons/Icon";
 import Image from "next/image";
 import imageStyle from "../styles/imageStyle.module.css";
-import Link from "next/link";
 import { useState } from "react";
-import WaitingHouses from "./waitingHouses";
-import DeliveredHomes from "./deliveredHomes";
+import Alteration from "../components/alteration";
+import Delivery from "../components/delivery";
 export default function Home() {
-  const [showHomes, setShowHomes] = useState(false);
+  const [showHomes, setShowHomes] = useState(true);
 
   const changeHomes = () => {
-    setShowHomes(showHomes=!showHomes)
+    setShowHomes((showHomes = !showHomes));
   };
 
   return (
@@ -22,7 +21,7 @@ export default function Home() {
       </Head>
 
       {/* HEADER */}
-      <div className="container mx-auto">
+      <div className="container mx-auto pb-48">
         <header className="w-full flex flex-col">
           <div className="flex flex-col pt-28 items-center">
             <h1 className="font-amatic  font-bold text-7xl text-black">
@@ -120,7 +119,7 @@ export default function Home() {
             </h1>
           </div>
           <div className="flex">
-            <Image src="/gallery2.png" className="" width={242} height={242} />
+            <Image src="/gallery2.png" width={242} height={242} />
             <Image src="/gallery1.png" width={242} height={242} />
             <Image src="/gallery3.png" width={242} height={242} />
             <Image src="/gallery4.png" width={242} height={242} />
@@ -129,23 +128,24 @@ export default function Home() {
 
         {/* HOME STATUS */}
 
-        <div className="flex flex-col">
-          <div className="flex justify-center items-center ">
+        <div className="flex flex-col mt-8">
+          <div className="flex justify-center items-center mb-8">
             <h1
               onClick={changeHomes}
-              className="mr-16 cursor-pointer font-amatic font-bold text-[40px] text-headerColor"
+              className={showHomes ? `mr-16 cursor-pointer font-amatic font-bold text-[40px] text-headerColor`:`mr-16 cursor-pointer font-amatic font-bold text-[40px] text-[#57544F]`}
             >
               Tadilat Bekleyen Evler
             </h1>
             <h1
               onClick={changeHomes}
-              className="mr-16 cursor-pointer font-amatic font-bold text-[40px] text-[#57544F]"
+              className={!showHomes ? `mr-16 cursor-pointer font-amatic font-bold text-[40px]  text-headerColor `:`mr-16 cursor-pointer font-amatic font-bold text-[40px] text-[#57544F] `}
             >
               Teslim Edilen Evler
             </h1>
           </div>
 
-          {showHomes ? <WaitingHouses /> : <DeliveredHomes />}
+          {showHomes ? <Alteration /> : <Delivery />}
+            
         </div>
       </div>
     </div>
