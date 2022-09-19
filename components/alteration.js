@@ -1,8 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 export default function Alteration() {
+   const router = useRouter()
   return (
 <>
 <div className='bg-white flex justify-evenly rounded-xl mb-5'>
@@ -26,10 +27,8 @@ export default function Alteration() {
        </div>
         </div>
         <div className='flex items-center'>
-          <button className='bg-white border border-[#BBB8B3] rounded-md w-28 h-10 mr-5'>
-            <Link href="/alterationDetail">
-            <a>Detayı Gör</a>
-            </Link>
+          <button onClick={()=> router.push("/alterationDetail")} className='bg-white border border-[#BBB8B3] rounded-md w-28 h-10 mr-5'>
+            Detayı Gör
           </button>
           <button className='bg-[#E6EEE3] border border-[#BBB8B3] rounded-md w-28 h-10 '>Destek Ver</button>
          

@@ -41,12 +41,26 @@ export default function AlterationDetail() {
       <div className="container mx-auto">
         <div className="flex justify-center">
           <div className="flex flex-col pr-20">
-            <h1 className="font-amatic font-bold text-7xl text-black">GÜLER TAŞDEMİR</h1>
-            <p className="text-[#57544F] font-jakarta font-semibold text-xs pt-5">TADİLAT DURUMU</p>
-            <p className="text-black font-jakarta font-normal text-xl">Balkon Tadilatı</p>
-            <p className="text-[#57544F] font-jakarta font-semibold text-xs pt-5">Maliyet</p>
-            <p className="text-black font-jakarta font-normal text-xl">3.000Tl</p>
-            <div className="pt-8"><button className="w-28 h-10 bg-[#E6EEE3] rounded-[5px] text-[#3C4439] text-sm font-jakarta font-medium">Destek Ver</button></div>
+            <h1 className="font-amatic font-bold text-7xl text-black">
+              GÜLER TAŞDEMİR
+            </h1>
+            <p className="text-[#57544F] font-jakarta font-semibold text-xs pt-5">
+              TADİLAT DURUMU
+            </p>
+            <p className="text-black font-jakarta font-normal text-xl">
+              Balkon Tadilatı
+            </p>
+            <p className="text-[#57544F] font-jakarta font-semibold text-xs pt-5">
+              Maliyet
+            </p>
+            <p className="text-black font-jakarta font-normal text-xl">
+              3.000Tl
+            </p>
+            <div className="pt-8">
+              <button className="w-28 h-10 bg-[#E6EEE3] rounded-[5px] text-[#3C4439] text-sm font-jakarta font-medium">
+                Destek Ver
+              </button>
+            </div>
           </div>
           <div className="w-[35rem]">
             <p>
@@ -62,6 +76,52 @@ export default function AlterationDetail() {
               oluşumu olduğu gözlemlenmiştir.
             </p>
           </div>
+        </div>
+        <div className="flex justify-center  pt-28">
+          <div>
+            <Image src="/destekDetay1.png" width={350} height={300} />
+          </div>
+          <div className="mx-6">
+            <Image src="/destekDetay1.png" width={350} height={300} />
+          </div>
+          <div>
+            <Image src="/destekDetay1.png" width={350} height={300} />
+          </div>
+        </div>
+        <div className="flex flex-col">
+          <div className="flex justify-center pt-40">
+            <h1 className="cursor-pointer font-amatic font-bold text-[40px] text-headerColor">
+              DİĞER TADİLAT BEKLEYEN EVLER
+            </h1>
+          </div>
+          <div className='bg-white flex justify-evenly rounded-xl mb-5'>
+        <div className='flex items-center py-5'>
+        <Image src="/gallery2.png" width={60} height={60} />
+       <div className='flex flex-col'>
+          <p className='font-jakarta font-semibold text-xs text-[#57544F]'>AD SOYAD</p>
+          <p className='font-jakarta font-normal text-xl text-black'>Güler Taşdemir</p>
+       </div>
+       <div className='flex flex-col px-12'>
+          <p className='font-jakarta font-semibold text-xs text-[#57544F]'>TELEFON</p>
+          <p className='font-jakarta font-normal text-xl text-black'>05539335203</p>
+       </div>
+       <div className='flex flex-col'>
+          <p className='font-jakarta font-semibold text-xs text-[#57544F]'>TADİLAT DURUMU</p>
+          <p className='font-jakarta font-normal text-xl text-black'>Balkon Tadilatı</p>
+       </div>
+       <div className='flex flex-col px-12'>
+          <p className='font-jakarta font-semibold text-xs text-[#57544F]'>MALİYET</p>
+          <p className='font-jakarta font-normal text-xl text-black '>3,000Tl</p>
+       </div>
+        </div>
+        <div className='flex items-center'>
+          <button onClick={()=> router.push("/alterationDetail")} className='bg-white border border-[#BBB8B3] rounded-md w-28 h-10 mr-5'>
+            Detayı Gör
+          </button>
+          <button className='bg-[#E6EEE3] border border-[#BBB8B3] rounded-md w-28 h-10 '>Destek Ver</button>
+         
+        </div>
+    </div>
         </div>
       </div>
     </>
