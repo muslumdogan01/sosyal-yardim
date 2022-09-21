@@ -43,12 +43,12 @@ export default function Home() {
               onClick={changeHomes}
               className={
                 showHomes
-                  ? `mr-16 cursor-pointer font-amatic font-bold text-[40px] text-headerColor `
-                  : `mr-16 cursor-pointer font-amatic font-bold text-[40px] text-[#57544F] `
+                  ? `mr-16 cursor-pointer font-amatic font-bold text-2xl md:text-[40px] text-headerColor `
+                  : `mr-16 cursor-pointer font-amatic font-bold text-2xl  md:text-[40px] text-[#57544F] `
               }
             >
               Tadilat Bekleyen Evler
-              <span className="fill-[#E03F1E]"><Icon name="line" /></span>
+              <span className="fill-[#E03F1E] md:visible hidden"><Icon name="line" /></span>
             </h1>
 
       
@@ -57,8 +57,8 @@ export default function Home() {
               onClick={changeHomes}
               className={
                 !showHomes
-                  ? `mr-16 cursor-pointer font-amatic font-bold text-[40px]  text-headerColor `
-                  : `mr-16 cursor-pointer font-amatic font-bold text-[40px] text-[#57544F] `
+                  ? `mr-16 cursor-pointer font-amatic font-bold text-2xl  text-[40px]  text-headerColor `
+                  : `mr-16 cursor-pointer font-amatic font-bold text-2xl  text-[40px] text-[#57544F] `
               }
             >
               Teslim Edilen Evler
