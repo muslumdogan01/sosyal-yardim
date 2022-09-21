@@ -4,8 +4,10 @@ import Image from "next/image";
 import { Icon } from "../icons/Icon";
 import Link from "next/link";
 import Slider from "../components/slider";
+import { useRouter } from 'next/router'
 
 export default function AlterationDetail() {
+  const router = useRouter()
   let [isOpen, setIsOpen] = useState(false)
 
   const toggleSlider = () => {
@@ -47,7 +49,7 @@ export default function AlterationDetail() {
       </div>
 
       <div className="container mx-auto">
-        <div className="flex justify-center">
+        <div className="flex justify-center ">
           <div className="flex flex-col pr-20">
             <h1 className="font-amatic font-bold text-7xl text-black">
               GÜLER TAŞDEMİR
@@ -65,7 +67,7 @@ export default function AlterationDetail() {
               3.000Tl
             </p>
             <div className="pt-8">
-              <button className="w-28 h-10 bg-[#E6EEE3] rounded-[5px] text-[#3C4439] text-sm font-jakarta font-medium">
+              <button onClick={()=>router.push('/support')} className="w-28 h-10 bg-[#E6EEE3] rounded-[5px] text-[#3C4439] text-sm font-jakarta font-medium">
                 Destek Ver
               </button>
             </div>
@@ -107,7 +109,7 @@ export default function AlterationDetail() {
               DİĞER TADİLAT BEKLEYEN EVLER
             </h1>
           </div>
-          <div className="bg-white flex justify-evenly rounded-xl mb-5">
+          <div className="bg-white flex justify-evenly rounded-xl mb-5 mt-5">
             <div className="flex items-center py-5">
               <Image src="/gallery2.png" width={60} height={60} />
               <div className="flex flex-col">
@@ -150,7 +152,7 @@ export default function AlterationDetail() {
               >
                 Detayı Gör
               </button>
-              <button className="bg-[#E6EEE3] border border-[#BBB8B3] rounded-md w-28 h-10 ">
+              <button onClick={()=>router.push('/support')} className="bg-[#E6EEE3] border border-[#BBB8B3] rounded-md w-28 h-10 ">
                 Destek Ver
               </button>
             </div>

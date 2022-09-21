@@ -45,48 +45,51 @@ export default function Support() {
 
         {/* ICERIKLER  */}
 
-        <div className="flex flex-col justify-center items-center bg-gray-200">
-          <div className="flex flex-col  bg-white w-1/2 text-center ">
-            <div className="flex justify-between px-10">
+        <div className="flex flex-col justify-center items-center bg-gray-00 w-full  pt-16">
+          <div className="flex flex-col  bg-white text-center rounded-[10px]">
+            <div
+              className="flex justify-between px-5 py-10
+            "
+            >
               <div className="flex">
                 <div className="flex flex-col">
-                  <h1>TADİLAT DURUMU</h1>
-                  <h1>Balkon Tadilatı</h1>
+                  <h1 className="font-jakarta font-semibold text-base text-[#57544F]">TADİLAT DURUMU</h1>
+                  <h1 className="font-jakarta font-normal text-xl text-black">Balkon Tadilatı</h1>
                 </div>
                 <div className="flex flex-col">
-                  <h1>TADİLAT MALİYETİ</h1>
-                  <h1>3.000TL</h1>
+                  <h1 className="font-jakarta font-semibold text-base text-[#57544F] ml-10">TADİLAT MALİYETİ</h1>
+                  <h1 className="font-jakarta font-normal text-xl text-black">3.000TL</h1>
                 </div>
               </div>
               <div className="flex">
                 <div className="flex flex-col">
-                  <h1>DESTEK DURUMU</h1>
+                  <h1 className="font-jakarta font-semibold text-base text-left text-[#57544F]">DESTEK DURUMU</h1>
                   <div className="flex">
-                    <div className="flex">
+                    <div className="flex pr-10">
                       <input type="radio" name="" id="" />
-                      <h1>Maliyeti Karşıla</h1>
+                      <h1 className="font-normal text-base font-jakarta text-black">Maliyeti Karşıla</h1>
                     </div>
                     <div className="flex">
                       <input type="radio" name="" id="" />
-                      <h1>Tadilatı Ben yapacağım </h1>
+                      <h1 className="font-normal text-base font-jakarta text-black">Tadilatı Ben yapacağım </h1>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="flex w-full h-1 bg-[#0000001a]"></div>
+            <div className="flex w-full h-[1px] bg-[#0000001a]"></div>
 
             {/* INPUT */}
-            <div class="py-8 lg:py-16 px-4 max-w-screen-md">
+            <div class="lg:py-10 px-4 max-w-screen-md">
               <form action="#" class="space-y-8">
-                <div>
-                  <div className="flex">
+                <div className="flex  flex-col">
+                  <div className="flex md:flex-row flex-col">
                     <input
                       type="text"
                       id="name"
                       name="name"
-                      class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-96 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                      class="shadow-sm  bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-96 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                       placeholder="Adınız"
                       required
                     />
@@ -94,17 +97,16 @@ export default function Support() {
                       type="text"
                       id="surname"
                       name="surname"
-                      class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-96 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                      class="shadow-sm ml-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-96 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                       placeholder="Soyadınız"
                       required
                     />
                   </div>
-                  <div className="flex">
+                  <div className="flex md:flex-row flex-col md:pt-8 pt-3">
                     <input
                       type="text"
                       id="surname"
                       name="phone"
-                      
                       class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-96 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                       placeholder="Telefon Numaranız"
                       required
@@ -113,7 +115,7 @@ export default function Support() {
                       type="email"
                       id="email"
                       name="email"
-                      class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-96 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                      class="shadow-sm ml-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-96 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                       placeholder="Mail Adresiniz"
                       required
                     />
@@ -128,12 +130,14 @@ export default function Support() {
                     placeholder="Varsa Mesajınız"
                   ></textarea>
                 </div>
-                <button
+          <div className="w-full flex justify-end items-end">
+          <button
                   type="submit"
-                  class="py-3 px-5 bg-green-500 text-sm font-medium text-right text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                  class="py-3 w-[18.75rem] text-center px-5 bg-[#92CFA3] text-base font-medium  text-black rounded-[5px] "
                 >
-                  Send message
+                  Gönder
                 </button>
+          </div>
               </form>
             </div>
           </div>

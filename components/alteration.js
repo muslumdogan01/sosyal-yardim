@@ -30,7 +30,7 @@ export default function Alteration() {
           <button onClick={()=> router.push("/alterationDetail")} className='bg-white border border-[#BBB8B3] rounded-md w-28 h-10 mr-5'>
             Detayı Gör
           </button>
-          <button className='bg-[#E6EEE3] border border-[#BBB8B3] rounded-md w-28 h-10 '>Destek Ver</button>
+          <button onClick={()=> router.push("/support")} className='bg-[#E6EEE3] border border-[#BBB8B3] rounded-md w-28 h-10 '>Destek Ver</button>
          
         </div>
     </div>
