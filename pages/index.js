@@ -11,9 +11,15 @@ import Gallery from "../components/gallery";
 export default function Home() {
   const [showHomes, setShowHomes] = useState(true);
 
-  const changeHomes = () => {
-    setShowHomes((showHomes = !showHomes));
+  const goAlteration = () => {
+    setShowHomes(!showHomes);
   };
+  const goDelivery = () => {
+    setShowHomes(!showHomes);
+  };
+
+
+
 
   return (
     <div className="bg-pageBg w-full h-screen ">
@@ -40,7 +46,7 @@ export default function Home() {
         <div className="flex flex-col mt-40">
           <div className="flex justify-center items-center mb-8 relative">
             <h1
-              onClick={changeHomes}
+              onClick={goAlteration}
               className={
                 showHomes
                   ? `mr-16 cursor-pointer font-amatic font-bold text-2xl md:text-[40px] text-headerColor `
@@ -48,13 +54,13 @@ export default function Home() {
               }
             >
               Tadilat Bekleyen Evler
-              <span className="fill-[#E03F1E] md:visible hidden"><Icon name="line" /></span>
+              <span className="fill-[#E03F1E] md:visible hidden">
+                <Icon name="line" />
+              </span>
             </h1>
 
-      
-
             <h1
-              onClick={changeHomes}
+              onClick={goDelivery}
               className={
                 !showHomes
                   ? `mr-16 cursor-pointer font-amatic font-bold text-2xl  md:text-[40px]  text-headerColor `
@@ -66,6 +72,7 @@ export default function Home() {
           </div>
 
           {showHomes ? <Alteration /> : <Delivery />}
+         
         </div>
       </div>
     </div>

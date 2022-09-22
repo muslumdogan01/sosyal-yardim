@@ -48,7 +48,7 @@ export default function Support() {
         <div className="flex flex-col justify-center items-center bg-gray-00 w-full  pt-16">
           <div className="flex flex-col  bg-white text-center rounded-[10px]">
             <div
-              className="flex justify-between px-5 py-10
+              className="flex md:flex-row flex-col justify-between px-5 py-10
             "
             >
               <div className="flex">
@@ -62,16 +62,16 @@ export default function Support() {
                 </div>
               </div>
               <div className="flex">
-                <div className="flex flex-col">
+                <div className="flex flex-col md:pt-0 pt-10">
                   <h1 className="font-jakarta font-semibold text-base text-left text-[#57544F]">DESTEK DURUMU</h1>
                   <div className="flex">
                     <div className="flex pr-10">
                       <input type="radio" name="" id="" />
-                      <h1 className="font-normal text-base font-jakarta text-black">Maliyeti Karşıla</h1>
+                      <h1 className="font-normal text-base font-jakarta text-black ml-1">Maliyeti Karşıla</h1>
                     </div>
                     <div className="flex">
                       <input type="radio" name="" id="" />
-                      <h1 className="font-normal text-base font-jakarta text-black">Tadilatı Ben yapacağım </h1>
+                      <h1 className="font-normal text-base font-jakarta text-black ml-1">Tadilatı Ben yapacağım </h1>
                     </div>
                   </div>
                 </div>
@@ -84,7 +84,7 @@ export default function Support() {
             <div class="lg:py-10 px-4 max-w-screen-md">
               <form action="#" class="space-y-8">
                 <div className="flex  flex-col">
-                  <div className="flex md:flex-row flex-col">
+                  <div className="flex md:flex-row flex-col justify-center items-center pt-3 md:pt-0">
                     <input
                       type="text"
                       id="name"
@@ -97,12 +97,12 @@ export default function Support() {
                       type="text"
                       id="surname"
                       name="surname"
-                      class="shadow-sm ml-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-96 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                      class="shadow-sm md:ml-4 mt-3 md:mt-0 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-96 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                       placeholder="Soyadınız"
                       required
                     />
                   </div>
-                  <div className="flex md:flex-row flex-col md:pt-8 pt-3">
+                  <div className="flex md:flex-row flex-col md:pt-8 pt-3 justify-center items-center">
                     <input
                       type="text"
                       id="surname"
@@ -115,14 +115,14 @@ export default function Support() {
                       type="email"
                       id="email"
                       name="email"
-                      class="shadow-sm ml-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-96 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                      class="shadow-sm md:ml-4 mt-3 md:mt-0 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-96 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                       placeholder="Mail Adresiniz"
                       required
                     />
                   </div>
                 </div>
 
-                <div class="sm:col-span-2">
+                <div class="sm:col-span-2 justify-center items-center">
                   <textarea
                     id="message"
                     rows="2"
@@ -130,7 +130,7 @@ export default function Support() {
                     placeholder="Varsa Mesajınız"
                   ></textarea>
                 </div>
-          <div className="w-full flex justify-end items-end">
+          <div className="w-full flex justify-center items-center">
           <button
                   type="submit"
                   class="py-3 w-[18.75rem] text-center px-5 bg-[#92CFA3] text-base font-medium  text-black rounded-[5px] "
