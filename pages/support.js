@@ -2,8 +2,36 @@ import Head from "next/head";
 import { Icon } from "../icons/Icon";
 import Image from "next/image";
 import Link from "next/link";
+import { useFormik } from "formik";
+import * as Yup from "yup";
+import { Formik } from "formik";
 
 export default function Support() {
+  const formik = useFormik({
+    initialValues: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone:"",
+      description:""
+    },
+    validationSchema: Yup.object({
+      firstName: Yup.string()
+        .max(15, "15 Karakterden fazla girilemez")
+        .required("Lütfen Adınızı Giriniz"),
+      lastName: Yup.string()
+        .max(15, "15 Karakterden fazla girilemez")
+        .required("Lütfen Soyadınızı Giriniz"),
+      phone: Yup.string()
+        .required("Lütfen numaranızı giriniz"),
+        description: Yup.string(),
+      email: Yup.string().email("Geçersiz e-posta adresi").required("Lütfen e-mail adresinizi giriniz."),
+    }),
+    onSubmit: (values) => {
+      console.log(JSON.stringify(values, null, 2));
+      formik.resetForm();
+    },
+  });
   return (
     <>
       <Head>
@@ -53,25 +81,39 @@ export default function Support() {
             >
               <div className="flex">
                 <div className="flex flex-col">
-                  <h1 className="font-jakarta font-semibold text-base text-[#57544F]">TADİLAT DURUMU</h1>
-                  <h1 className="font-jakarta font-normal text-xl text-black">Balkon Tadilatı</h1>
+                  <h1 className="font-jakarta font-semibold text-base text-[#57544F]">
+                    TADİLAT DURUMU
+                  </h1>
+                  <h1 className="font-jakarta font-normal text-xl text-black">
+                    Balkon Tadilatı
+                  </h1>
                 </div>
                 <div className="flex flex-col">
-                  <h1 className="font-jakarta font-semibold text-base text-[#57544F] ml-10">TADİLAT MALİYETİ</h1>
-                  <h1 className="font-jakarta font-normal text-xl text-black">3.000TL</h1>
+                  <h1 className="font-jakarta font-semibold text-base text-[#57544F] ml-10">
+                    TADİLAT MALİYETİ
+                  </h1>
+                  <h1 className="font-jakarta font-normal text-xl text-black">
+                    3.000TL
+                  </h1>
                 </div>
               </div>
               <div className="flex">
                 <div className="flex flex-col md:pt-0 pt-10">
-                  <h1 className="font-jakarta font-semibold text-base text-left text-[#57544F]">DESTEK DURUMU</h1>
+                  <h1 className="font-jakarta font-semibold text-base text-left text-[#57544F]">
+                    DESTEK DURUMU
+                  </h1>
                   <div className="flex">
                     <div className="flex pr-10">
                       <input type="radio" name="" id="" />
-                      <h1 className="font-normal text-base font-jakarta text-black ml-1">Maliyeti Karşıla</h1>
+                      <h1 className="font-normal text-base font-jakarta text-black ml-1">
+                        Maliyeti Karşıla
+                      </h1>
                     </div>
                     <div className="flex">
                       <input type="radio" name="" id="" />
-                      <h1 className="font-normal text-base font-jakarta text-black ml-1">Tadilatı Ben yapacağım </h1>
+                      <h1 className="font-normal text-base font-jakarta text-black ml-1">
+                        Tadilatı Ben yapacağım{" "}
+                      </h1>
                     </div>
                   </div>
                 </div>
@@ -82,25 +124,40 @@ export default function Support() {
 
             {/* INPUT */}
             <div class="lg:py-10 px-4 max-w-screen-md">
-              <form action="#" class="space-y-8">
+              <form onSubmit={formik.handleSubmit} class="space-y-8">
                 <div className="flex  flex-col">
                   <div className="flex md:flex-row flex-col justify-center items-center pt-3 md:pt-0">
                     <input
                       type="text"
-                      id="name"
-                      name="name"
-                      class="shadow-sm  bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-96 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                      id="firstName"
+                      name="firstName"
+                      class="shadow-sm w-96 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                       placeholder="Adınız"
-                      required
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      value={formik.values.firstName}
                     />
+
                     <input
                       type="text"
-                      id="surname"
-                      name="surname"
-                      class="shadow-sm md:ml-4 mt-3 md:mt-0 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-96 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                      id="lastName"
+                      name="lastName"
+                      class="shadow-sm w-96 md:ml-4  bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                       placeholder="Soyadınız"
-                      required
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      value={formik.values.lastName}
                     />
+                  </div>
+                  <div className="flex items-center justify-around">
+                    {formik.touched.firstName && formik.errors.firstName ? (
+                      <div className="text-red-500">
+                        {formik.errors.firstName}
+                      </div>
+                    ) : null}
+                    {formik.touched.lastName && formik.errors.lastName ? (
+                      <div className="text-red-500">{formik.errors.lastName}</div>
+                    ) : null}
                   </div>
                   <div className="flex md:flex-row flex-col md:pt-8 pt-3 justify-center items-center">
                     <input
@@ -109,7 +166,9 @@ export default function Support() {
                       name="phone"
                       class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-96 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                       placeholder="Telefon Numaranız"
-                      required
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      value={formik.values.phone}
                     />
                     <input
                       type="email"
@@ -117,8 +176,21 @@ export default function Support() {
                       name="email"
                       class="shadow-sm md:ml-4 mt-3 md:mt-0 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-96 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                       placeholder="Mail Adresiniz"
-                      required
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      value={formik.values.email}
                     />
+             
+                  </div>
+                  <div className="flex items-center justify-around">
+                    {formik.touched.phone && formik.errors.phone ? (
+                      <div className="text-red-500">
+                        {formik.errors.phone}
+                      </div>
+                    ) : null}
+                    {formik.touched.email && formik.errors.email ? (
+                      <div className="text-red-500">{formik.errors.email}</div>
+                    ) : null}
                   </div>
                 </div>
 
@@ -128,16 +200,20 @@ export default function Support() {
                     rows="2"
                     class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                     placeholder="Varsa Mesajınız"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                  
                   ></textarea>
                 </div>
-          <div className="w-full flex justify-center items-center">
-          <button
-                  type="submit"
-                  class="py-3 w-[18.75rem] text-center px-5 bg-[#92CFA3] text-base font-medium  text-black rounded-[5px] "
-                >
-                  Gönder
-                </button>
-          </div>
+       
+                <div className="w-full flex justify-center items-center">
+                  <button
+                    type="submit"
+                    class="py-3 w-[18.75rem] text-center px-5 bg-[#92CFA3] text-base font-medium  text-black rounded-[5px] "
+                  >
+                    Gönder
+                  </button>
+                </div>
               </form>
             </div>
           </div>
