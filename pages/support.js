@@ -42,7 +42,7 @@ export default function Support() {
       <div className="w-full bg-[#F9B399] h-[6px]"></div>
       <div className="container mx-auto">
         <div className="flex">
-          <div className="w-full flex justify-around">
+          <div className="w-full md:flex justify-around hidden">
             <div className="pt-[7.438rem]">
               <Icon name="leftCloud" />
             </div>
@@ -74,9 +74,9 @@ export default function Support() {
         {/* ICERIKLER  */}
 
         <div className="flex flex-col justify-center items-center bg-gray-00 w-full  pt-16">
-          <div className="flex flex-col  bg-white text-center rounded-[10px]">
+          <div className="flex flex-col items-center bg-white text-center rounded-[10px]">
             <div
-              className="flex md:flex-row flex-col justify-between px-5 py-10
+              className="flex md:flex-row flex-col justify-around w-full py-10 items-center
             "
             >
               <div className="flex">
@@ -97,7 +97,7 @@ export default function Support() {
                   </h1>
                 </div>
               </div>
-              <div className="flex">
+              <div className="flex ">
                 <div className="flex flex-col md:pt-0 pt-10">
                   <h1 className="font-jakarta font-semibold text-base text-left text-[#57544F]">
                     DESTEK DURUMU
@@ -123,15 +123,15 @@ export default function Support() {
             <div className="flex w-full h-[1px] bg-[#0000001a]"></div>
 
             {/* INPUT */}
-            <div class="lg:py-10 px-4 max-w-screen-md">
-              <form onSubmit={formik.handleSubmit} class="space-y-8">
+            <div class="lg:py-10  max-w-screen-md">
+              <form onSubmit={formik.handleSubmit} className="space-y-8 ">
                 <div className="flex  flex-col">
                   <div className="flex md:flex-row flex-col justify-center items-center pt-3 md:pt-0">
                     <input
                       type="text"
                       id="firstName"
                       name="firstName"
-                      class="shadow-sm w-96 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                      class="shadow-sm md:w-96 w-64 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                       placeholder="Adınız"
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
@@ -142,14 +142,14 @@ export default function Support() {
                       type="text"
                       id="lastName"
                       name="lastName"
-                      class="shadow-sm w-96 md:ml-4  bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                      class="shadow-sm md:w-96 w-64 md:ml-4 mt-3 md:mt-0 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                       placeholder="Soyadınız"
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
                       value={formik.values.lastName}
                     />
                   </div>
-                  <div className="flex items-center justify-around">
+                  <div className="flex items-center justify-around ">
                     {formik.touched.firstName && formik.errors.firstName ? (
                       <div className="text-red-500">
                         {formik.errors.firstName}
@@ -162,9 +162,9 @@ export default function Support() {
                   <div className="flex md:flex-row flex-col md:pt-8 pt-3 justify-center items-center">
                     <input
                       type="text"
-                      id="surname"
+                      id="phone"
                       name="phone"
-                      class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-96 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                      class="shadow-sm md:w-96 w-64 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                       placeholder="Telefon Numaranız"
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
@@ -174,7 +174,7 @@ export default function Support() {
                       type="email"
                       id="email"
                       name="email"
-                      class="shadow-sm md:ml-4 mt-3 md:mt-0 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-96 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                      class="shadow-sm md:ml-4 mt-3 md:mt-0 md:w-96 w-64 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                       placeholder="Mail Adresiniz"
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
