@@ -36,7 +36,7 @@ export default function AlterationDetail() {
         </div>
 
         <div className="flex flex-col md:flex-row md:pr-12 pt-11">
-          <span className="md:mr-32">
+          <span className="md:mr-32 hidden md:flex">
             <Icon name="rightCloud" />
           </span>
           <span className="flex justify-end">
@@ -52,8 +52,8 @@ export default function AlterationDetail() {
 
       <div className="container mx-auto">
         <div className="flex justify-center md:flex-row flex-col">
-          <div className="flex flex-col pr-20">
-            <h1 className="font-amatic font-bold text-5xl md:text-7xl text-black">
+          <div className="flex flex-col pr-20 md:items-start items-center ">
+            <h1 className="font-amatic font-bold text-4xl md:text-7xl text-black">
               GÜLER TAŞDEMİR
             </h1>
             <p className="text-[#57544F] font-jakarta font-semibold text-xs pt-5">
@@ -77,7 +77,7 @@ export default function AlterationDetail() {
               </button>
             </div>
           </div>
-          <div className="md:w-[35rem]">
+          <div className="md:w-[35rem] px-10 pt-10 md:px-0 md:pt-0">
             <p>
               Görüşme müracaatçının 13 yaşındaki kızı Yağmur Hanım ile
               gerçekleştirilmiştir. Yağmur Hanım evde annesi ve 1,5 yaşındaki
@@ -96,7 +96,7 @@ export default function AlterationDetail() {
           <Slider isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
 
-        <div className="flex itemsce justify-center md:flex-row flex-col pt-28">
+        <div className="flex items-center justify-center md:flex-row flex-col pt-28">
           <div>
             <Image
               onClick={toggleSlider}
