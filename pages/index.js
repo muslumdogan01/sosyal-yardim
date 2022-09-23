@@ -49,8 +49,8 @@ export default function Home() {
               onClick={goAlteration}
               className={
                 showHomes
-                  ? `mr-16 cursor-pointer font-amatic font-bold text-2xl md:text-[40px] text-headerColor `
-                  : `mr-16 cursor-pointer font-amatic font-bold text-2xl  md:text-[40px] text-[#57544F] `
+                  ? `md:mr-16 mr-5 cursor-pointer font-amatic font-bold text-2xl md:text-[40px] text-headerColor `
+                  : `md:mr-16 mr-10 cursor-pointer font-amatic font-bold text-2xl  md:text-[40px] text-[#57544F] `
               }
             >
               Tadilat Bekleyen Evler
@@ -63,8 +63,8 @@ export default function Home() {
               onClick={goDelivery}
               className={
                 !showHomes
-                  ? `mr-16 cursor-pointer font-amatic font-bold text-2xl  md:text-[40px]  text-headerColor `
-                  : `mr-16 cursor-pointer font-amatic font-bold text-2xl  md:text-[40px] text-[#57544F] `
+                  ? `md:mr-16  cursor-pointer font-amatic font-bold text-2xl  md:text-[40px]  text-headerColor `
+                  : `md:mr-16 mr-10   cursor-pointer font-amatic font-bold text-2xl  md:text-[40px] text-[#57544F] `
               }
             >
               Teslim Edilen Evler
