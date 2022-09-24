@@ -4,7 +4,7 @@ import React from "react";
 export default function Delivery() {
   return (
     <section class="mb-12">
-        <div class="bg-white alert alert-dismissible rounded-lg py-4 px-6 text-black md:flex justify-between items-center text-center md:text-left">
+        <div class="bg-white alert alert-dismissible rounded-lg py-8 px-6 text-black md:flex justify-between items-center text-center md:text-left">
           <div className="w-auto flex justify-center items-center flex-col md:flex-row">
             <div class="mb-4 md:mb-0 flex items-center flex-wrap justify-center md:justify-start relative md:mr-32">
               <span className="w-14 md:absolute md:left-0 ">
@@ -61,8 +61,8 @@ export default function Delivery() {
           <div class="flex items-center justify-center md:justify-end md:w-1/4">
             <button
             onClick={()=> router.push("/alterationDetail")}
-              class="inline-block px-5 py-[10px] bg-white border border-[#BBB8B3] text-black font-medium text-sm leading-tight uppercase rounded-[5px]  hover:bg-gray-100 hover:shadow-lg focus:bg-gray-100 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-200 active:shadow-lg transition duration-150 ease-in-out mr-10"
-              href="#!"
+            class="inline-block px-5 py-[10px] bg-white border border-[#BBB8B3] text-black font-medium text-sm leading-tight uppercase rounded-[5px]  hover:bg-[#BBB8B3] hover:text-white focus:outline-none transition duration-150 ease-in-out mr-10"
+            href="#!"
               role="button"
               data-mdb-ripple="true"
               data-mdb-ripple-color="light"
@@ -71,8 +71,8 @@ export default function Delivery() {
             </button>
             <button
             onClick={()=> router.push("/support")}
-              class="inline-block px-5 py-[10px] bg-[#E6EEE3] text-black font-medium text-sm leading-tight uppercase rounded-[5px]  hover:bg-gray-100 hover:shadow-lg focus:bg-gray-100 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-200 active:shadow-lg transition duration-150 ease-in-out "
-              href="#!"
+            class="inline-block px-5 py-[10px] bg-[#E6EEE3] text-black font-medium text-sm leading-tight uppercase rounded-[5px]  hover:bg-[#D4DCD1]  focus:outline-none  transition duration-150 ease-in-out "
+            href="#!"
               role="button"
               data-mdb-ripple="true"
               data-mdb-ripple-color="light"

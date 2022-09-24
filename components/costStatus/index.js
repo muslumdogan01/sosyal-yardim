@@ -8,11 +8,11 @@ export default function Cost() {
         <div>
           <Icon name="book" />
         </div>
-        <div className="flex flex-col items-center justify-center">
-          <span className="font-jakarta font-semibold lg:text-4xl text-xl text-black">
+        <div className="flex flex-col pl-3 justify-center">
+          <span className="font-jakarta font-semibold lg:text-4xl text-xl text-black ">
             101
           </span>
-          <span className="font-jakarta font-normal text-lg pl-3">
+          <span className="font-jakarta font-normal text-lg leading-8">
             Tadilat Bekleyen Ev
           </span>
         </div>
@@ -21,11 +21,11 @@ export default function Cost() {
         <div>
           <Icon name="home" />
         </div>
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col pl-3 justify-center">
           <span className="font-jakarta font-semibold lg:text-4xl text-xl text-black">
             71
           </span>
-          <span className="font-jakarta font-normal text-lg pl-3">
+          <span className="font-jakarta font-normal text-lg leading-8">
             Teslim edilen Ev
           </span>
         </div>
@@ -34,11 +34,11 @@ export default function Cost() {
         <div>
           <Icon name="money" />
         </div>
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col pl-2 justify-center">
           <span className="font-jakarta font-semibold lg:text-4xl text-xl text-black">
             9,9999
           </span>
-          <span className="font-jakarta font-normal text-lg pl-3">
+          <span className="font-jakarta font-normal text-lg leading-8">
             Toplam Maliyet
           </span>
         </div>

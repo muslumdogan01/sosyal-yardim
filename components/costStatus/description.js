@@ -3,10 +3,10 @@ import React from 'react'
 export default function Description() {
   return (
     <div className="w-full flex justify-center md:flex-row flex-col p-10 md:p-0 md:pt-28">
-    <h1 className="lg:w-[332px]  md:w-full font-amatic font-bold text-5xl lg:mr-20 text-black">
+    <h1 className="lg:w-[332px]  md:w-full font-amatic font-bold text-5xl lg:mr-20 text-black leading-[63px]">
       Lorem Ipsum Dolor Sit Consectetur Adipiscing Elit Adipiscing
     </h1>
-    <p className="lg:w-[567px] md:w-full font-jakarta font-normal text-base text-[#57544F] pt-10 md:pt-0">
+    <p className="lg:w-[567px] md:w-full font-jakarta font-normal text-base text-[#57544F] pt-10 md:pt-0 leading-[34px]">
       Morbi accumsan porta eros ac dignissim. Maecenas eleifend, nibh in
       accumsan auctor, est ipsum eleifend erat, eget viverra quam dolor
       sed elit. Donec ut placerat metus. Etiam bibendum nisi maximus

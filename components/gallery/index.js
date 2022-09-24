@@ -1,26 +1,29 @@
 import React from "react";
-import Image  from "next/image";
+import Image from "next/image";
 
 export default function Gallery() {
   return (
-    <div className="flex justify-center mt-28">
-      <div className="flex min-w-max">
-        <h1 className="font-jakarta font-normal text-lg text-black">
-          Güler Taşdemir
-        </h1>
-      </div>
-      <div className="w-full flex md:flex-row flex-col items-center justify-center">
-        <div className="-rotate-[15deg] z-40">
-          <Image src="/destekDetay1.png" width={242} height={242} />
+    <div className="flex md:mt-[8.938rem]">
+      <div className="w-full flex md:flex-row flex-col flex-wrap items-center justify-center ">
+        <div className="relative w-64 z-40">
+          <span className="md:absolute md:border-[7px] md:shadow-xl md:border-white w-full md:left-28 md:-top-5 md:rotate-[-15deg]">
+            <img src="/destekDetay1.png" width={242} height={242} />
+          </span>
         </div>
-        <div className="rotate-[10deg] z-30 ">
-          <Image src="/destekDetay1.png" width={242} height={242} />
+        <div className="relative w-64  z-30">
+          <span className="md:absolute w-full md:border-[7px] md:shadow-xl md:border-white md:left-10 md:rotate-[9.84deg] ">
+            <img src="/destekDetay1.png" width={242} height={242} />
+          </span>
         </div>
-        <div className="-rotate-[15deg] z-10">
-          <Image src="/destekDetay1.png" width={242} height={242} />
+        <div className="relative w-64  z-20">
+          <span className="md:absolute w-full md:border-[7px] md:shadow-xl md:border-white md:-top-5 md:right-30 md:rotate-[-15deg]">
+            <img src="/destekDetay1.png" width={242} height={242} />
+          </span>
         </div>
-        <div className="-rotate-[1deg] z-0">
-          <Image src="/destekDetay1.png" width={242} height={242} />
+        <div className="relative w-64  z-10">
+          <span className="md:absolute md:border-[7px] md:shadow-xl md:border-white w-full md:right-20 md:rotate-[-1deg] ">
+            <img src="/destekDetay1.png" width={242} height={242} />
+          </span>
         </div>
       </div>
     </div>

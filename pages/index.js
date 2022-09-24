@@ -43,14 +43,14 @@ export default function Home() {
 
         {/* HOMES STATUS */}
 
-        <div className="flex flex-col mt-40">
+        <div className="flex flex-col md:mt-[26.563rem]">
           <div className="flex justify-center items-center mb-8 relative">
             <h1
               onClick={goAlteration}
               className={
                 showHomes
-                  ? `md:mr-16 mr-5 cursor-pointer font-amatic font-bold text-2xl md:text-[40px] text-headerColor `
-                  : `md:mr-16 mr-10 cursor-pointer font-amatic font-bold text-2xl  md:text-[40px] text-[#57544F] `
+                  ? `md:mr-16 mr-5 cursor-pointer font-amatic font-bold text-2xl md:text-[40px] text-headerColor leading-10`
+                  : `md:mr-16 mr-10 cursor-pointer font-amatic font-bold text-2xl  md:text-[40px] text-[#57544F] leading-10`
               }
             >
               Tadilat Bekleyen Evler
@@ -63,8 +63,8 @@ export default function Home() {
               onClick={goDelivery}
               className={
                 !showHomes
-                  ? `md:mr-16  cursor-pointer font-amatic font-bold text-2xl  md:text-[40px]  text-headerColor `
-                  : `md:mr-16 mr-10   cursor-pointer font-amatic font-bold text-2xl  md:text-[40px] text-[#57544F] `
+                  ? `md:mr-16  cursor-pointer font-amatic font-bold text-2xl  md:text-[40px]  text-headerColor leading-10`
+                  : `md:mr-16 mr-10   cursor-pointer font-amatic font-bold text-2xl  md:text-[40px] text-[#57544F] leading-10`
               }
             >
               Teslim Edilen Evler

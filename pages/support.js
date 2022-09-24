@@ -56,14 +56,12 @@ export default function Support() {
             </div>
           </div>
           <Link href="/">
-            <span className="w-[50px] h-[50px] rounded-full flex cursor-pointer justify-center items-center text-[#57544F] text-xl bg-[#57544f33]">
-              X
-            </span>
+        <span className="cursor-pointer w-[70px] h-[70px] mt-11">  <Icon name="exit" /></span>
           </Link>
         </div>
         {/* BASLIK */}
         <div className="flex justify-center items-center ">
-          <h1 className="w-2/4 text-center font-jakarta font-normal text-base text-[#57544F] pt-8">
+          <h1 className="w-2/4 text-center font-jakarta font-normal text-base text-[#57544F] pt-8 leading-[34px]">
             Sevgili Hayır Sever, <b>Güler Taşdemir</b> isimli yardıma muhtaç
             kişiye yapmak istediğiniz destek bizi çok mutlu etti. Lütfen yapmak
             istediğiniz desteği bize bildirirseniz, sizinle en kısa sürede
@@ -76,43 +74,43 @@ export default function Support() {
         <div className="flex flex-col justify-center items-center bg-gray-00 w-full  pt-16">
           <div className="flex flex-col items-center bg-white text-center rounded-[10px]">
             <div
-              className="flex md:flex-row flex-col justify-around w-full py-10 items-center
+              className="flex md:flex-row flex-col justify-around w-full py-10  items-center
             "
             >
               <div className="flex">
                 <div className="flex flex-col">
-                  <h1 className="font-jakarta font-semibold text-base text-[#57544F]">
+                  <h1 className="font-jakarta font-semibold text-base text-[#57544F] leading-5">
                     TADİLAT DURUMU
                   </h1>
-                  <h1 className="font-jakarta font-normal text-xl text-black">
+                  <h1 className="font-jakarta font-normal text-xl text-black leading-8">
                     Balkon Tadilatı
                   </h1>
                 </div>
                 <div className="flex flex-col">
-                  <h1 className="font-jakarta font-semibold text-base text-[#57544F] ml-10">
+                  <h1 className="font-jakarta font-semibold text-base text-[#57544F] ml-10 leading-5">
                     TADİLAT MALİYETİ
                   </h1>
-                  <h1 className="font-jakarta font-normal text-xl text-black">
+                  <h1 className="font-jakarta font-normal text-xl text-black leading-8 ">
                     3.000TL
                   </h1>
                 </div>
               </div>
               <div className="flex ">
-                <div className="flex flex-col md:pt-0 pt-10">
-                  <h1 className="font-jakarta font-semibold text-base text-left text-[#57544F]">
+                <div className="flex flex-col md:pt-0 pt-10 px-5 md:px-0">
+                  <h1 className="font-jakarta font-semibold text-base text-left text-[#57544F] ">
                     DESTEK DURUMU
                   </h1>
                   <div className="flex">
                     <div className="flex pr-10">
                       <input type="radio" name="" id="" />
-                      <h1 className="font-normal text-base font-jakarta text-black ml-1">
+                      <h1 className="font-normal text-base font-jakarta text-black ml-1 leading-6">
                         Maliyeti Karşıla
                       </h1>
                     </div>
                     <div className="flex">
                       <input type="radio" name="" id="" />
-                      <h1 className="font-normal text-base font-jakarta text-black ml-1">
-                        Tadilatı Ben yapacağım{" "}
+                      <h1 className="font-normal text-base font-jakarta text-black ml-1 leading-6">
+                        Tadilatı Ben yapacağım
                       </h1>
                     </div>
                   </div>
@@ -123,7 +121,7 @@ export default function Support() {
             <div className="flex w-full h-[1px] bg-[#0000001a]"></div>
 
             {/* INPUT */}
-            <div class="lg:py-10  max-w-screen-md">
+            <div class="lg:py-10  max-w-screen-md px-5">
               <form onSubmit={formik.handleSubmit} className="space-y-8 ">
                 <div className="flex  flex-col">
                   <div className="flex md:flex-row flex-col justify-center items-center pt-3 md:pt-0">

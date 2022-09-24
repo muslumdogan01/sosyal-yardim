@@ -42,9 +42,7 @@ export default function AlterationDetail() {
           <span className="flex justify-end">
 
             <Link href="/">
-              <span className="md:w-[50px] w-10 h-10  md:h-[50px] rounded-full flex cursor-pointer justify-center items-center text-[#57544F] text-xl bg-[#57544f33]">
-                X
-              </span>
+            <span className="cursor-pointer w-[70px] h-[70px]">  <Icon name="exit" /></span>
             </Link>
           </span>
         </div>
@@ -53,7 +51,7 @@ export default function AlterationDetail() {
       <div className="container mx-auto">
         <div className="flex justify-center md:flex-row flex-col">
           <div className="flex flex-col pr-20 md:items-start items-center ">
-            <h1 className="font-amatic font-bold text-4xl md:text-7xl text-black">
+            <h1 className="font-amatic font-bold text-4xl md:text-7xl text-black leading-[100px]">
               GÜLER TAŞDEMİR
             </h1>
             <p className="text-[#57544F] font-jakarta font-semibold text-xs pt-5">
@@ -77,8 +75,8 @@ export default function AlterationDetail() {
               </button>
             </div>
           </div>
-          <div className="md:w-[35rem] px-10 pt-10 md:px-0 md:pt-0">
-            <p>
+          <div className="md:w-[35rem] px-10 pt-10 md:px-0 md:pt-0 ">
+            <p className="leading-[34px]">
               Görüşme müracaatçının 13 yaşındaki kızı Yağmur Hanım ile
               gerçekleştirilmiştir. Yağmur Hanım evde annesi ve 1,5 yaşındaki
               kız kardeşi ile birlikte gecekondu tipi bir evde 500TL kira bedeli
@@ -96,7 +94,7 @@ export default function AlterationDetail() {
           <Slider isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
 
-        <div className="flex items-center justify-center md:flex-row flex-col pt-28">
+        <div className="flex items-center justify-center md:flex-row flex-col pt-[118px]">
           <div>
             <Image
               onClick={toggleSlider}
@@ -123,13 +121,13 @@ export default function AlterationDetail() {
           </div>
         </div>
         <div className="flex flex-col">
-          <div className="flex justify-center pt-40">
+          <div className="flex justify-center pt-[150px]">
             <h1 className="cursor-pointer font-amatic font-bold text-[40px] text-headerColor">
               DİĞER TADİLAT BEKLEYEN EVLER
             </h1>
           </div>
           <section class="mb-48 mt-5">
-            <div class="bg-white alert alert-dismissible rounded-lg py-4 px-6 text-black md:flex justify-between items-center text-center md:text-left">
+            <div class="bg-white alert alert-dismissible rounded-lg py-8 px-6 text-black md:flex justify-between items-center text-center md:text-left">
               <div className="w-auto flex justify-center items-center flex-col md:flex-row">
                 <div class="mb-4 md:mb-0 flex items-center flex-wrap justify-center md:justify-start relative md:mr-32">
                   <span className="w-14 md:absolute md:left-0 ">
@@ -186,7 +184,7 @@ export default function AlterationDetail() {
               <div class="flex items-center justify-center md:justify-end md:w-1/4">
                 <button
                   onClick={() => router.push("/alterationDetail")}
-                  class="inline-block px-5 py-[10px] bg-white border border-[#BBB8B3] text-black font-medium text-sm leading-tight uppercase rounded-[5px]  hover:bg-gray-100 hover:shadow-lg focus:bg-gray-100 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-200 active:shadow-lg transition duration-150 ease-in-out mr-10"
+                  class="inline-block px-5 py-[10px] bg-white border border-[#BBB8B3] text-black font-medium text-sm leading-tight uppercase rounded-[5px]  hover:bg-[#BBB8B3] hover:text-white focus:outline-none transition duration-150 ease-in-out mr-10"
                   href="#!"
                   role="button"
                   data-mdb-ripple="true"
@@ -196,7 +194,7 @@ export default function AlterationDetail() {
                 </button>
                 <button
                   onClick={() => router.push("/support")}
-                  class="inline-block px-5 py-[10px] bg-[#E6EEE3] text-black font-medium text-sm leading-tight uppercase rounded-[5px]  hover:bg-gray-100 hover:shadow-lg focus:bg-gray-100 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-200 active:shadow-lg transition duration-150 ease-in-out "
+                  class="inline-block px-5 py-[10px] bg-[#E6EEE3] text-black font-medium text-sm leading-tight uppercase rounded-[5px]  hover:bg-[#D4DCD1]  focus:outline-none  transition duration-150 ease-in-out "
                   href="#!"
                   role="button"
                   data-mdb-ripple="true"
