@@ -8,7 +8,10 @@ import Header from "../components/header";
 import Cost from "../components/costStatus";
 import Description from "../components/costStatus/description";
 import Gallery from "../components/gallery";
-export default function Home() {
+
+
+export default function Home(props) {
+  console.log({props})
   const [showHomes, setShowHomes] = useState(true);
 
   const goAlteration = () => {
@@ -36,7 +39,6 @@ export default function Home() {
         {/* CONTENT */}
         <Cost />
         <Description />
-
         {/* PHOTO GALLERY */}
 
         <Gallery />
@@ -77,4 +79,16 @@ export default function Home() {
       </div>
     </div>
   );
+}
+
+
+
+
+export const getServerSideProps = async()=>{
+  const data = await fetch("https://jsonplaceholder.typicode.com/users").then(res => res.json());
+  return{
+    props:{
+      data
+    }
+  }
 }

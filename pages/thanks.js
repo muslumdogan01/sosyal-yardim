@@ -2,6 +2,7 @@ import { Icon } from "../icons/Icon";
 import { Router, useRouter } from "next/router";
 
 export default function Thanks() {
+ 
   const router = useRouter()
   return (
     <>
@@ -43,3 +44,5 @@ export default function Thanks() {
     </>
   );
 }
+
+
