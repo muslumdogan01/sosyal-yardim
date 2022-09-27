@@ -1,10 +1,13 @@
 import React from "react";
 import Image from "next/image";
 
-export default function Gallery() {
+
+export default function Gallery(data) {
+  console.log('galeri',data)
   return (
     <div className="flex md:mt-[8.938rem]">
       <div className="w-full flex md:flex-row flex-col flex-wrap items-center justify-center ">
+
         <div className="relative w-64 z-40 mb-6 md:mb-0">
           <span className="md:absolute md:border-[7px] md:shadow-xl md:border-white w-full md:left-28 md:-top-5 md:rotate-[-15deg]">
             <img src="/destekDetay1.png" width={242} height={242} />

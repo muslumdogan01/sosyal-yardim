@@ -9,9 +9,20 @@ import Cost from "../components/costStatus";
 import Description from "../components/costStatus/description";
 import Gallery from "../components/gallery";
 
+const defaultEndpoint = "https://649c-212-133-239-178.eu.ngrok.io/"
 
-export default function Home(props) {
-  console.log({props})
+export const getServerSideProps = async()=>{
+  const data = await fetch(`${defaultEndpoint}api/summary`).then(res => res.json());
+  return{
+    props:{
+      data
+    }
+  }
+}
+
+
+export default function Home(data) {
+
   const [showHomes, setShowHomes] = useState(true);
 
   const goAlteration = () => {
@@ -37,11 +48,11 @@ export default function Home(props) {
       </header>
       <div className="container mx-auto pb-48">
         {/* CONTENT */}
-        <Cost />
+        <Cost data={data} />
         <Description />
         {/* PHOTO GALLERY */}
 
-        <Gallery />
+        <Gallery data={data} />
 
         {/* HOMES STATUS */}
 
@@ -73,7 +84,7 @@ export default function Home(props) {
             </h1>
           </div>
 
-          {showHomes ? <Alteration /> : <Delivery />}
+          {showHomes ? <Alteration data={data} /> : <Delivery data={data}  />}
          
         </div>
       </div>
@@ -84,11 +95,3 @@ export default function Home(props) {
 
 
 
-export const getServerSideProps = async()=>{
-  const data = await fetch("https://jsonplaceholder.typicode.com/users").then(res => res.json());
-  return{
-    props:{
-      data
-    }
-  }
-}
